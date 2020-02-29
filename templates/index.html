@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+
+{% block main %}
+
+    {#    <div class="popup" id="js-popup">#}
+    {#        <div class="popup-inner">#}
+    {#            <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>#}
+    {#            <span>あいうえお</span>#}
+    {#        </div>#}
+    {#        <div class="black-background" id="js-black-bg"></div>#}
+    {#    </div>#}
+    {##}
+    {#    <button id="js-show-popup" class="tw-pop">募集ツイートをする</button>#}
+    <a href="https://twitter.com/intent/tweet?text=【プレイヤーネーム:】%0D%0A
+【使用キャラ:】%0D%0A
+【ランク:】%0D%0A
+【VSID:】%0D%0A
+【コメント:】%0D%0A
+%0D%0A
+%23GBVS対戦募集" target="_blank" class="tw-pop">
+{#        <button class="tw-pop">募集ツイートをする</button>#}募集ツイートをする
+    </a>
+
+
+    <form action="{{ url_for('index') }}" class="search-filter">
+        <span>検索フィルタ</span>
+        <div class="rank_tiers">
+            {% for tier_k, tier_v in tiers.items() %}
+                <label class="radio"><input type="radio" name="rank_tiers" value="{{ tier_k }}"
+                                            {% if tier_v.checked %}checked{% endif %}>{{ tier_v.name }}</label>
+            {% endfor %}
+        </div>
+        <div class="character">
+            {% for chara_k, chara_v in characters.items() %}
+                <label class="radio"><input type="radio" name="character" value="{{ chara_k }}"
+                                            {% if chara_v.checked %}checked{% endif %}>{{ chara_v.name }}</label>
+            {% endfor %}
+        </div>
+        <input type="submit" value="検索">
+    </form>
+
+    <table class="main-table">
+        <thead>
+        <tr>
+            <th scope="col">名前</th>
+            <th scope="col">キャラ</th>
+            <th scope="col">ランク</th>
+            <th scope="col">プレイヤーネーム</th>
+            <th scope="col">VSID</th>
+            <th scope="col">コメント</th>
+            <th scope="col">時間</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for tweet in tweets %}
+            <tr class="serch-results">
+                <td data-label="名前" class="name-data">
+                    <a href="https://twitter.com/{{ tweet.twitter_id }}/status/{{ tweet.tweet_id }}"
+                       target="_blank"><i class="fab fa-twitter tw-link"></i>
+                    </a>
+                    {{ tweet.twitter_name }}<span class="twitter-id">@{{ tweet.twitter_id }}</span>
+                </td>
+                <td data-label="キャラ">{{ tweet.character }}</td>
+                <td data-label="ランク">{{ tweet.rank }}</td>
+                <td data-label="プレイヤーネーム">{{ tweet.player_name }}</td>
+                <td data-label="VSID">{{ tweet.vsid }}</td>
+                <td data-label="コメント">{{ tweet.comment }}</td>
+                <td data-label="時間">{{ tweet.elapsed_time }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

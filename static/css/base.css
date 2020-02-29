@@ -1,0 +1,16 @@
+footer {
+    width: 100%;
+    height: 80px;
+    /*background: #6da6cb;*/
+    background: #89d1ff;
+}
+
+footer div {
+    width: 100%;
+    text-align: center;
+}
+
+footer div small {
+    color: black;
+    font-size: 15px;
+}
