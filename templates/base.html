@@ -9,14 +9,16 @@
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c04e61aeba.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/static/css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/resp_index.css">
     <script src="/static/js/index.js" defer></script>
 </head>
 <body>
 
 <header>
-    <h4>GBVSレーダー</h4>
+    <a href="{{ url_for('index') }}">GBVSレーダー</a>
 </header>
 
 <main>
@@ -25,7 +27,12 @@
 </main>
 
 <footer>
-    <div>
+
+    <div class="cs">
+        <a href="https://twitter.com/toka_373" target="_blank">問い合わせ</a>
+    </div>
+
+    <div class="cr">
         <small>© 2020 GBVS Radar. By Toka</small>
     </div>
 

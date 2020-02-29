@@ -1,0 +1,102 @@
+@media screen and (min-width: 600px) {
+    .search-filter-resp {
+        display: none;
+    }
+
+    .main-table-rsp {
+        display: none;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    table {
+        width: 94%;
+        table-layout: fixed;
+        margin-bottom: 30px;
+    }
+
+    .search-filter {
+        display: none;
+    }
+
+    .tw-pop {
+        width: 172px;
+        height: 42px;
+    }
+
+    .search-filter-resp {
+        margin-bottom: 20px;
+    }
+
+    .search-filter-resp span {
+        font-size: 15px
+    }
+
+    .search-filter-resp div label {
+        font-size: 25px;
+    }
+
+
+    .search-filter-resp div {
+        background-color: initial;
+    }
+
+    .search-filter-resp div select {
+        border: solid thin;
+        border-radius: initial;
+        padding: 2px 0;
+        font-family: Lato, Helvetica, Arial, sans-serif;;
+    }
+
+    .tw-link {
+        font-size: 30px;
+    }
+
+    .serch-btn {
+        margin-top: 5px;
+    }
+
+    .main-table {
+        display: none;
+    }
+
+    .main-table-rsp th {
+        font-size: 20px;
+    }
+
+    .main-table-rsp thead tr th {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+
+    .tbl-name {
+        width: 30%;
+    }
+
+    .tbl-tw {
+        width: 70%;
+    }
+
+
+    .name-data {
+        width: 30%;
+        border-right: solid thin rgba(0, 0, 0, 0.28);
+        border-bottom: solid rgba(0, 0, 0, 0.5);
+        word-wrap: break-word;
+    }
+
+
+    .main-tweet {
+        width: 70%;
+        border-bottom: solid rgba(0, 0, 0, 0.5);
+        font-size: 15px;
+    }
+
+    .tmp {
+        font-size: 10px;
+        opacity: 0.8;
+    }
+}

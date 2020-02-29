@@ -19,7 +19,7 @@
 【コメント:】%0D%0A
 %0D%0A
 %23GBVS対戦募集" target="_blank" class="tw-pop">
-{#        <button class="tw-pop">募集ツイートをする</button>#}募集ツイートをする
+        {#        <button class="tw-pop">募集ツイートをする</button>#}募集ツイートをする
     </a>
 
 
@@ -31,13 +31,38 @@
                                             {% if tier_v.checked %}checked{% endif %}>{{ tier_v.name }}</label>
             {% endfor %}
         </div>
+
         <div class="character">
             {% for chara_k, chara_v in characters.items() %}
                 <label class="radio"><input type="radio" name="character" value="{{ chara_k }}"
                                             {% if chara_v.checked %}checked{% endif %}>{{ chara_v.name }}</label>
             {% endfor %}
         </div>
-        <input type="submit" value="検索">
+
+        <input type="submit" value="検索" class="serch-btn">
+    </form>
+
+    <form action="{{ url_for('index') }}" class="search-filter-resp">
+        <span>検索フィルタ</span>
+        <div class="rank_tiers">ランク:
+            <select name="rank_tiers">
+                {% for tier_k, tier_v in tiers.items() %}
+                    <option value="{{ tier_k }}" {% if tier_v.checked %}selected{% endif %}>{{ tier_v.name }}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+
+        <div class="character">キャラクター:
+            <select name="character">
+                {% for chara_k, chara_v in characters.items() %}
+                    <option value="{{ chara_k }}"
+                            {% if chara_v.checked %}selected{% endif %}>{{ chara_v.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <input type="submit" value="検索" class="serch-btn">
     </form>
 
     <table class="main-table">
@@ -67,6 +92,35 @@
                 <td data-label="VSID">{{ tweet.vsid }}</td>
                 <td data-label="コメント">{{ tweet.comment }}</td>
                 <td data-label="時間">{{ tweet.elapsed_time }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <table class="main-table-rsp">
+        <thead>
+        <tr>
+            <th scope="col" class="tbl-name">名前</th>
+            <th scope="col" class="tbl-tw">ツイート</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for tweet in tweets %}
+            <tr class="serch-results">
+                <td data-label="名前" class="name-data">
+                    <a href="https://twitter.com/{{ tweet.twitter_id }}/status/{{ tweet.tweet_id }}"
+                       target="_blank"><i class="fab fa-twitter tw-link"></i>
+                    </a>
+                    <span class="playername">{{ tweet.twitter_name }}</span><br><span class="twitter-id">@{{ tweet.twitter_id }}</span>
+                </td>
+                <td class="main-tweet">
+                    <span class="tmp">【プレイヤーネーム:】</span>{{ tweet.player_name }}<br>
+                    <span class="tmp">【使用キャラ:】</span>{{ tweet.character }}<br>
+                    <span class="tmp">【ランク:】</span>{{ tweet.rank }}<br>
+                    <span class="tmp">【VSID:】</span>{{ tweet.vsid }}<br>
+                    <span class="tmp">【コメント:】</span>{{ tweet.comment }}<br>
+                </td>
             </tr>
         {% endfor %}
         </tbody>
