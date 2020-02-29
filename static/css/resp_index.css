@@ -19,6 +19,7 @@
 
     .search-filter {
         display: none;
+
     }
 
     .tw-pop {
@@ -27,7 +28,8 @@
     }
 
     .search-filter-resp {
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
+        width: 94%;
     }
 
     .search-filter-resp span {
