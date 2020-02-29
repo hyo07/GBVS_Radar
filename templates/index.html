@@ -112,14 +112,16 @@
                     <a href="https://twitter.com/{{ tweet.twitter_id }}/status/{{ tweet.tweet_id }}"
                        target="_blank"><i class="fab fa-twitter tw-link"></i>
                     </a>
-                    <span class="playername">{{ tweet.twitter_name }}</span><br><span class="twitter-id">@{{ tweet.twitter_id }}</span>
+                    <span class="playername">{{ tweet.twitter_name }}</span><br><span
+                        class="twitter-id">@{{ tweet.twitter_id }}</span>
+                    <span class="dt-delay">{{ tweet.elapsed_time }}前</span>
                 </td>
                 <td class="main-tweet">
                     <span class="tmp">【プレイヤーネーム:】</span>{{ tweet.player_name }}<br>
                     <span class="tmp">【使用キャラ:】</span>{{ tweet.character }}<br>
                     <span class="tmp">【ランク:】</span>{{ tweet.rank }}<br>
                     <span class="tmp">【VSID:】</span>{{ tweet.vsid }}<br>
-                    <span class="tmp">【コメント:】</span>{{ tweet.comment }}<br>
+                    <span class="tmp">【コメント:】</span>{{ tweet.comment }}
                 </td>
             </tr>
         {% endfor %}
