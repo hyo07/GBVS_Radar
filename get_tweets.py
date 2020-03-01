@@ -137,5 +137,5 @@ def save_tweet():
 if __name__ == "__main__":
     pass
 
-    print(get_tweet())
+    # print(get_tweet())
     save_tweet()
