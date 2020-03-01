@@ -11,6 +11,9 @@ sqlalchemy = "*"
 dotenv = "*"
 python-dotenv = "*"
 flask = "*"
+oauthlib = "*"
+requests = "*"
+mysqlclient = "*"
 
 [requires]
 python_version = "3.7"

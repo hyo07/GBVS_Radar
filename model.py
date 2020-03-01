@@ -22,6 +22,17 @@ if username == "ec2-user":
         echo=False
     )
 else:
+    # DATABASE = 'mysql+mysqldb://{user_name}:{password}@{ip}/{db_name}?charset=utf8mb4'.format(
+    #     user_name="hyo07",
+    #     password="Syuuei23",
+    #     ip="localhost",
+    #     db_name="gbvs_radar",
+    # )
+    # ENGINE = create_engine(
+    #     DATABASE,
+    #     encoding="utf-8",
+    #     echo=False
+    # )
     # sqliteの設定
     dir_name = os.path.dirname(__file__)
     sqlite_path = dir_name + "/test.sqlite3"
