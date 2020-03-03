@@ -69,13 +69,17 @@ def get_tweet():
                     del extraction_comment[spl_tweets.index(tw)]
                     flag = True
                     break
+                elif v == "VSID":
+                    content[k] = ""
+                    flag = True
+                    break
                 flag = False
             if not flag:
                 # print("不正なツイート")
                 break
         if not flag:
             continue
-
+        # print(content)
         # if not (content['player_name'] and content["character"] and content["rank"] and content["vsid"]):
         if not content["player_name"]:
             continue
@@ -88,8 +92,9 @@ def get_tweet():
 
         outer = {"main": content, "rank_tier": None}
 
-        tiers = ["SSS", "SS", "S", "A", "B", "C", "D", "E"]
-        full_wdth_tiers = {"ＳＳＳ": "SSS", "ＳＳ": "SS", "Ｓ": "S", "Ａ": "A", "Ｂ": "B", "Ｃ": "C", "Ｄ": "D", "Ｅ": "E"}
+        tiers = ["SSSS", "SSS", "SS", "S", "A", "B", "C", "D", "E"]
+        full_wdth_tiers = {"ＳＳＳＳ": "SSSS", "ＳＳＳ": "SSS", "ＳＳ": "SS", "Ｓ": "S", "Ａ": "A", "Ｂ": "B", "Ｃ": "C", "Ｄ": "D",
+                           "Ｅ": "E"}
         for ti in tiers:
             if ti in content["rank"].upper():
                 outer["rank_tier"] = ti
