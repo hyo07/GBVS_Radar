@@ -46,7 +46,7 @@ def index():
         "メーテラ": {"checked": False, "character": "メーテラ", "name": "メーテラ"},
         "ゼタ": {"checked": False, "character": "ゼタ", "name": "ゼタ"},
         "バザラガ": {"checked": False, "character": "バザラガ", "name": "バザラガ"},
-        "ベルゼバブ": {"checked": False, "character": "ベル", "name": "ベルゼバブ"},
+        "バブ": {"checked": False, "character": "バブ", "name": "ベルゼバブ"},
         "ナルメア": {"checked": False, "character": "ナルメア", "name": "ナルメア"},
     }
 
