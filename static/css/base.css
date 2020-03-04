@@ -49,3 +49,25 @@ footer {
     font-size: 20px;
 
 }
+
+/*.about {*/
+/*    margin-right: 50px;*/
+/*}*/
+
+
+/*.question {*/
+/*    margin-left: 50px;*/
+
+/*}*/
+
+@media screen and (max-width: 600px) {
+    /*.about {*/
+    /*    margin-right: 15px;*/
+    /*}*/
+
+
+    /*.question {*/
+    /*    margin-left: 15px;*/
+
+    /*}*/
+}

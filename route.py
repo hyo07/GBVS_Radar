@@ -103,6 +103,11 @@ def index():
     return render_template("index.html", tweets=tweets_json, tiers=tier_dic, characters=chara_dic)
 
 
+# @app.route("/about")
+# def about():
+#     return render_template("about.html")
+
+
 if __name__ == "__main__":
     app.run(host="localhost", port=8000, debug=True)
     # app.run(host="0.0.0.0", port=8000, debug=False)
