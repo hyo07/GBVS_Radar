@@ -2,7 +2,21 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="GBVSレーダーは、グランブルーファンタジー バーサス（GBVS）の対戦募集ツイートをまとめるサイトです。"/>
     <title>GBVSレーダー</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132562878-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-132562878-4');
+    </script>
+
     <link rel="icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/flat-ui.min.css">
@@ -31,7 +45,7 @@
 <footer>
 
     <div class="cs">
-{#        <a class="about" href="{{ url_for('about') }}">このサイトについて</a>#}
+        {#        <a class="about" href="{{ url_for('about') }}">このサイトについて</a>#}
 
         <a href="https://twitter.com/toka_373" target="_blank" class="question">問い合わせ</a>
     </div>
