@@ -20,6 +20,8 @@ def parse_elapsed(dt):
 
 @app.route("/")
 def index():
+    session.remove()
+
     tweets_json = []
     tier_dic = {
         "": {"checked": False, "rank": "", "name": "全て"},
