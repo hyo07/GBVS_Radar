@@ -215,3 +215,7 @@ table tbody th {
     background: #007bd4;
     color: white;
 }
+
+.table-time {
+    width: 7%;
+}
