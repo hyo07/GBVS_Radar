@@ -216,6 +216,15 @@ table tbody th {
     color: white;
 }
 
+.table-rank {
+    width: 6%;
+
+}
+
+.table-plname {
+    width: 12%;
+}
+
 .table-time {
     width: 7%;
 }
