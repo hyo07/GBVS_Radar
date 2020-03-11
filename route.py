@@ -25,7 +25,7 @@ def index():
     tweets_json = []
     tier_dic = {
         "": {"checked": False, "rank": "", "name": "全て"},
-        "Master": {"checked": False, "rank": "Master", "name": "Master"},
+        "MASTER": {"checked": False, "rank": "Master", "name": "Master"},
         "SSS": {"checked": False, "rank": "SSS", "name": "SSS"},
         "SS": {"checked": False, "rank": "SS", "name": "SS"},
         "S": {"checked": False, "rank": "S", "name": "S"},

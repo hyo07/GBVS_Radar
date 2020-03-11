@@ -92,8 +92,8 @@ def get_tweet():
 
         outer = {"main": content, "rank_tier": None}
 
-        tiers = ["Master", "SSS", "SS", "S", "A", "B", "C", "D", "E"]
-        full_wdth_tiers = {"Master": "Master", "ＳＳＳ": "SSS", "ＳＳ": "SS", "Ｓ": "S", "Ａ": "A", "Ｂ": "B", "Ｃ": "C",
+        tiers = ["MASTER", "SSS", "SS", "S", "A", "B", "C", "D", "E"]
+        full_wdth_tiers = {"MASTER": "MASTER", "ＳＳＳ": "SSS", "ＳＳ": "SS", "Ｓ": "S", "Ａ": "A", "Ｂ": "B", "Ｃ": "C",
                            "Ｄ": "D", "Ｅ": "E"}
         for ti in tiers:
             if ti in content["rank"].upper():
