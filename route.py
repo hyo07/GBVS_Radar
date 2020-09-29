@@ -53,6 +53,7 @@ def index():
         "ソリッズ": {"checked": False, "character": "ソリッズ", "name": "ソリッズ"},
         "ジータ": {"checked": False, "character": "ジータ", "name": "ジータ"},
         "ゾーイ": {"checked": False, "character": "ゾーイ", "name": "ゾーイ"},
+        "ベリアル": {"checked": False, "character": "ベリアル", "name": "ベリアル"},
     }
 
     dt_now = datetime.now()
